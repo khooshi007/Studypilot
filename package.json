@@ -1,0 +1,24 @@
+{
+  "name": "studypilot-desktop",
+  "productName": "StudyPilot",
+  "version": "1.0.0",
+  "description": "StudyPilot: lessons, quizzes, plans and questions from your own notes",
+  "main": "main.js",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.studypilot.desktop",
+    "productName": "StudyPilot",
+    "directories": { "output": "dist" },
+    "files": ["main.js", "package.json", "app/**/*"],
+    "win": { "target": [{ "target": "nsis", "arch": ["x64"] }] },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true, "createDesktopShortcut": true }
+  }
+}

@@ -1,2 +1,27 @@
-# Studypilot
-# StudyPilot – Your Personal AI-Powered Learning Companion  **Learn Smarter. Stay Focused. Achieve More.**  StudyPilot is an intelligent, AI-powered study companion designed to make learning more organised, engaging, and effective. It transforms your study materials into personalised learning experiences, helping students understand concepts, practise important topics, manage their study schedules, and track their academic progress — all in one convenient platform.  With a clean, modern interface and smart learning tools, StudyPilot brings together the essential elements of productive studying. Students can upload PDF documents, import text notes, or paste their own study materials and transform them into structured lessons, interactive quizzes, personalised study plans, and question-based explanations.  ### Key Features  - **AI-Powered Learning:** Convert your study notes into easy-to-understand lessons and explanations. - **Interactive Quizzes:** Test your knowledge with multiple-choice questions and instant feedback. - **Smart Flashcards:** Strengthen memory and revise important concepts through active recall. - **Personalised Study Plans:** Create structured, day-by-day learning schedules based on your goals. - **Study Library:** Organise and manage your learning materials in one central place. - **Progress Tracking:** Monitor your learning activity, study streaks, completed sessions, and progress. - **Spaced Repetition:** Review challenging questions at carefully spaced intervals to improve long-term retention. - **Focus Timer:** Use a Pomodoro-style 25-minute focus session followed by a short break to build productive study habits. - **Customised Learning:** Adjust explanations to beginner, intermediate, or advanced learning levels. - **Modern User Experience:** Enjoy a responsive, elegant interface with light and dark themes.  ### Our Vision  Our vision is to make quality learning more accessible, personalised, and productive. StudyPilot aims to reduce the stress of managing study materials while encouraging consistent learning habits and better knowledge retention.  ### Why StudyPilot?  Instead of switching between multiple applications for notes, quizzes, revision, scheduling, and productivity, StudyPilot brings these tools together in one organised learning environment.  **StudyPilot isn't just a study tool — it's your personal companion for smarter learning, consistent progress, and academic success.**  *StudyPilot — Plan Your Learning. Master Your Goals.*
+# StudyPilot desktop
+
+A Windows app that runs StudyPilot in its own window.
+
+## Build the .exe (on a Windows computer)
+
+1. Install Node.js LTS from https://nodejs.org.
+2. Open this folder in a terminal (PowerShell or Command Prompt).
+3. Run:
+
+       npm install
+       npm run build:win
+
+4. The installer appears in `dist\` as `StudyPilot Setup 1.0.0.exe`. Run it to install StudyPilot.
+
+To test without building, run `npm install` then `npm start`.
+
+## Using it
+
+Open Settings, paste your Claude API key, and click Save key. Get a key at console.anthropic.com. Notes, results, and progress are stored on your computer, and the key is sent only to Anthropic.
+
+## Notes
+
+- The app is the same as the StudyPilot web artifact, with one change: it uses your API key instead of the artifact's built-in AI access.
+- Updates to the web app do not reach the desktop copy automatically. Copy the new `app/index.html` in.
+- Windows may show a SmartScreen warning because the installer is not code-signed.
+- Versions of Electron and electron-builder are pinned loosely. If `npm install` fails, update them in package.json.
